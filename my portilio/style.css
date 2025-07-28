@@ -1,0 +1,114 @@
+/* Elementos principais com bordas arredondadas */
+.servico,
+.caso, /* Corrigido de .cases para .caso (para manter padrão do HTML) */
+.qualificacao, 
+.formulario-contato, 
+.contato-info,
+.caso-info { /* Corrigido de .cases-info para .caso-info */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Cards de serviços - ajuste refinado */
+.servico {
+    background: white;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards de casos - estilo aprimorado */
+.caso {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.caso img {
+    border-radius: 15px 0 0 15px; /* Top-left e bottom-left */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste responsivo para imagens de casos */
+@media (max-width: 992px) {
+    .caso {
+        flex-direction: column;
+    }
+    
+    .caso img {
+        border-radius: 15px 15px 0 0 !important; /* Sobrescreve qualquer outro estilo */
+        width: 100%;
+        max-height: 200px;
+    }
+}
+
+/* Qualificações - estilo refinado */
+.qualificacao {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.qualificacao i {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1a3e72;
+}
+
+/* Formulário de contato - bordas consistentes */
+.formulario-contato {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contato-info {
+    background: #1a3e72;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Botões - estilo aprimorado */
+.botao {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Inputs - estilo consistente */
+.grupo-form input,
+.grupo-form textarea {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    transition: border 0.3s ease;
+}
+
+.grupo-form input:focus,
+.grupo-form textarea:focus {
+    border-color: #1a3e72;
+    outline: none;
+}
+
+/* Efeitos hover - refinados */
+.servico:hover,
+.caso:hover,
+.qualificacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Efeito especial para botões */
+.botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Cantos arredondados para a imagem de perfil */
+.sobre-imagem img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
